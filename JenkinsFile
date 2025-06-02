@@ -11,14 +11,14 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo Building the project...'
-                // bat 'mvn package' or whatever your actual Windows build command is
+                // Add your build steps here (e.g., bat 'mvn package' or bat 'npm install')
             }
         }
 
         stage('Deploy') {
             steps {
                 bat 'echo Deploying the project...'
-                // add deployment steps here
+                // Add your deploy logic here (e.g., bat 'copy ...', bat 'xcopy ...')
             }
         }
     }
