@@ -4,18 +4,20 @@ pipeline {
     stages {
         stage('Pull from GitHub') {
             steps {
-                git 'https://github.com/Malaikakhattak69/Devops.git'
+                git branch: 'main', url: 'https://github.com/Malaikakhattak69/Devops.git'
             }
         }
+
         stage('Build') {
             steps {
-                bat 'echo Simulating build...'
+                bat 'echo ===== BUILD STAGE ====='
                 bat 'type index.txt'
             }
         }
+
         stage('Deploy') {
             steps {
-                bat 'echo Simulating deployment...'
+                bat 'echo ===== DEPLOY STAGE ====='
                 bat 'type index.html'
             }
         }
