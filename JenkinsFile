@@ -7,18 +7,16 @@ pipeline {
                 git 'https://github.com/Malaikakhattak69/Devops.git'
             }
         }
-
         stage('Build') {
             steps {
-                bat 'echo Building the project...'
-                // Replace with: bat 'npm install', bat 'mvn package', etc.
+                bat 'echo Simulating build...'
+                bat 'type index.txt'
             }
         }
-
         stage('Deploy') {
             steps {
-                bat 'echo Deploying the project...'
-                // Simulate deployment (optional)
+                bat 'echo Simulating deployment...'
+                bat 'type index.html'
             }
         }
     }
